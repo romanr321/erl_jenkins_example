@@ -1,0 +1,11 @@
+{application,erl_jenkins_example,
+             [{description,"An OTP application"},
+              {vsn,"0.1.0"},
+              {registered,[]},
+              {mod,{erl_jenkins_example_app,[]}},
+              {applications,[kernel,stdlib,xmerl,cowboy]},
+              {env,[]},
+              {modules,[a_handler,erl_jenkins_example_app,
+                        erl_jenkins_example_sup]},
+              {licenses,["Apache-2.0"]},
+              {links,[]}]}.

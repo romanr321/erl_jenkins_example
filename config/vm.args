@@ -1,0 +1,6 @@
+-sname erl_jenkins_example
+
+-setcookie erl_jenkins_example_cookie
+
++K true
++A30
