@@ -14,7 +14,7 @@ pipeline {
                         sh 'docker build --no-cache -t 10.0.0.109:5000/erl_jenkins_example .'
 
                         // push docker.las
-                        sh 'docker push 10.0.0.109:5000/erl_jenkins_example'
+                        sh 'docker image push 10.0.0.109:5000/erl_jenkins_example'
                         
                         sh 'docker rmi -f 10.0.0.109:5000/erl_jenkins_example '
                     }
