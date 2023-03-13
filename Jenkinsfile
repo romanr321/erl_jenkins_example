@@ -6,8 +6,9 @@ pipeline {
 
                 dir('example'){
                     git url: 'https://github.com/romanr321/erl_jenkins_example.git'
+                    sh 'echo ls'
                     // go inside repo folder
-                    dir('example'){
+                    dir('erl_jenkins_example'){
                         sh 'docker-cred-reset'
 
                         // build docker image
