@@ -3,8 +3,6 @@ pipeline {
     stages {
         stage('Build and Push to local registry') {
             steps {
-
-                dir('example'){
                     git url: 'https://github.com/romanr321/erl_jenkins_example.git'
                     sh 'echo ls'
                     // go inside repo folder
