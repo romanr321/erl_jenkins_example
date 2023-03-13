@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'centos7'}
+    agent { label any}
     stages {
         stage('Build and Push to local registry') {
             steps {
