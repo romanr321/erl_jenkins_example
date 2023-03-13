@@ -23,16 +23,16 @@ pipeline {
         }
     }
     post {
-        changed {
-            // have to use a script block here to get the conditional working
-            script {
-                if (env.BRANCH_NAME == 'master') {
-                    // currentBuild.result is null in the case of SUCCESS
-                    def result = currentBuild.result ?: 'SUCCESS'
-                    slackSend channel:'platform-gateway', message:"${result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})"
-                }
-            }
-        }
+        // changed {
+        //     // have to use a script block here to get the conditional working
+        //     script {
+        //         if (env.BRANCH_NAME == 'master') {
+        //             // currentBuild.result is null in the case of SUCCESS
+        //             def result = currentBuild.result ?: 'SUCCESS'
+        //             slackSend channel:'platform-gateway', message:"${result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})"
+        //         }
+        //     }
+        // }
         cleanup {
             cleanupAgent()
         }
